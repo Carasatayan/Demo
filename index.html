@@ -1,33 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Voice Agent Demo</title>
+<head>
+    
+    
+    <title>DA Beauty Bar - Voice Booking</title>
     <style>
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-        margin: 24px;
-      }
-      #voiceChatRoot {
-        max-width: 520px;
-      }
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Demo – Voice Agent</h1>
-    <p>Click and allow microphone access.</p>
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ DA Beauty Bar</h1>
+        <p>Click below to speak with our booking assistant</p>
+        <div id="voiceChatRoot"></div>
+    </div>
 
-    <div id="voiceChatRoot"></div>
-
-    <!-- 1) Define the token BEFORE loading the external script -->
-    <script>
-      window.agx =
-        "698e3ccaeff52c083b438915wspM/5LjzFdCW+hAnSzNaQ==|mussGND+irx5MAwC0lnUaONYClXVRWvB9aWbTvE8EaU=";
+    <script defer>
+        window.agx = '698e3ccaeff52c083b438915wspM/5LjzFdCW+hAnSzNaQ==|mussGND+irx5MAwC0lnUaONYClXVRWvB9aWbTvE8EaU=';
     </script>
-
-    <!-- 2) Load the library -->
     <script defer src="https://cdn-dev.agentx.so/agentx-voice-chat.js"></script>
-  </body>
+</body>
 </html>
-
