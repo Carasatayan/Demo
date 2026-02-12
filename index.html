@@ -1,24 +1,33 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Demo Agente de Voz</title>
+    <title>Voice Agent Demo</title>
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 24px; }
-      #voiceChatRoot { max-width: 520px; }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        margin: 24px;
+      }
+      #voiceChatRoot {
+        max-width: 520px;
+      }
     </style>
   </head>
   <body>
-    <h1>Demo – Agente de Voz</h1>
-    <p>Haz clic y permite el micrófono.</p>
+    <h1>Demo – Voice Agent</h1>
+    <p>Click and allow microphone access.</p>
 
     <div id="voiceChatRoot"></div>
 
+    <!-- 1) Define the token BEFORE loading the external script -->
     <script>
       window.agx =
         "698e3ccaeff52c083b438915wspM/5LjzFdCW+hAnSzNaQ==|mussGND+irx5MAwC0lnUaONYClXVRWvB9aWbTvE8EaU=";
     </script>
+
+    <!-- 2) Load the library -->
     <script defer src="https://cdn-dev.agentx.so/agentx-voice-chat.js"></script>
   </body>
 </html>
+
